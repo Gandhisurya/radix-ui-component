@@ -18,13 +18,17 @@ import {
   Heading,
   IconButton,
   Inset,
+  Popover,
+  Grid,
 } from "@radix-ui/themes";
 
 import {
   ExclamationTriangleIcon,
   GitHubLogoIcon,
   InfoCircledIcon,
+  Link1Icon,
   MagnifyingGlassIcon,
+  Share2Icon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
@@ -301,6 +305,8 @@ export default function Home() {
         </Text>
       </div>
       <div className="my-10 mx-auto">
+        <p className="font-semibold text-xl mb-5 text-center">IconButton</p>
+
         <IconButton onClick={() => alert("april fool")}>
           <MagnifyingGlassIcon width="18" height="18" />
         </IconButton>
@@ -309,6 +315,8 @@ export default function Home() {
         </Text>
       </div>
       <div className="my-10 mx-auto">
+        <p className="font-semibold text-xl mb-5 text-center">Inset</p>
+
         <Card size="3" className="w-[90vw] sm:w-[600px]">
           <Flex>
             <Inset side="left" mr="5">
@@ -339,6 +347,44 @@ export default function Home() {
             </Box>
           </Flex>
         </Card>
+      </div>
+      <div className="my-10 mx-auto">
+        <Popover.Root>
+          <Popover.Trigger>
+            <Button variant="soft">
+              <Share2Icon width="16" height="16" />
+              Share image
+            </Button>
+          </Popover.Trigger>
+          <Popover.Content style={{ width: 360 }}>
+            <Grid columns="120px 1fr">
+              <Inset side="left" pr="current">
+                <img
+                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?&auto=format&fit=crop&w=400&q=80"
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                />
+              </Inset>
+
+              <div>
+                <Heading size="2" mb="1">
+                  Share this image
+                </Heading>
+                <Text as="p" size="2" mb="4" color="gray">
+                  Minimalistic 3D rendering wallpaper.
+                </Text>
+
+                <Flex direction="column" align="stretch">
+                  <Popover.Close>
+                    <Button size="1" variant="soft">
+                      <Link1Icon width="16" height="16" />
+                      Copy link
+                    </Button>
+                  </Popover.Close>
+                </Flex>
+              </div>
+            </Grid>
+          </Popover.Content>
+        </Popover.Root>
       </div>
     </main>
   );
