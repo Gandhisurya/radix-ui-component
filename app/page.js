@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import {
   Flex,
   Text,
@@ -33,6 +33,11 @@ import {
 import Link from "next/link";
 
 export default function Home() {
+  const [value, setValue] = React.useState(null);
+
+  const image =
+    "https://images.unsplash.com/photo-1479030160180-b1860951d696?&auto=format&fit=crop&w=1200&q=80";
+
   return (
     <main className="flex flex-col w-full">
       <div className="max-w-[500px] mx-auto">
@@ -349,6 +354,8 @@ export default function Home() {
         </Card>
       </div>
       <div className="my-10 mx-auto">
+        <p className="font-semibold text-xl mb-5 text-center">Popover</p>
+
         <Popover.Root>
           <Popover.Trigger>
             <Button variant="soft">
@@ -375,7 +382,13 @@ export default function Home() {
 
                 <Flex direction="column" align="stretch">
                   <Popover.Close>
-                    <Button size="1" variant="soft">
+                    <Button
+                      onClick={() => {
+                        setValue(image);
+                      }}
+                      size="1"
+                      variant="soft"
+                    >
                       <Link1Icon width="16" height="16" />
                       Copy link
                     </Button>
