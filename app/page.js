@@ -8,6 +8,7 @@ import {
   AspectRatio,
   Avatar,
   Badge,
+  Callout,
 } from "@radix-ui/themes";
 
 export default function Home() {
@@ -121,6 +122,17 @@ export default function Home() {
             Complete
           </Badge>
         </Flex>
+      </div>
+      <div className="my-10 mx-auto">
+        <Callout.Root>
+          <Callout.Icon>
+            <InfoCircledIcon />
+          </Callout.Icon>
+          <Callout.Text>
+            You will need admin privileges to install and access this
+            application.
+          </Callout.Text>
+        </Callout.Root>
       </div>
     </main>
   );
