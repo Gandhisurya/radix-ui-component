@@ -1,6 +1,13 @@
 "use client";
 
-import { Flex, Text, Button, AlertDialog, AspectRatio } from "@radix-ui/themes";
+import {
+  Flex,
+  Text,
+  Button,
+  AlertDialog,
+  AspectRatio,
+  Avatar,
+} from "@radix-ui/themes";
 
 export default function Home() {
   return (
@@ -44,21 +51,35 @@ export default function Home() {
           </AlertDialog.Content>
         </AlertDialog.Root>
       </div>
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center ">
         <p className="text-xl font-semibold">Aspect Ratio</p>
-        <AspectRatio ratio={16 / 9}>
-          <img
-            src="https://images.unsplash.com/photo-1479030160180-b1860951d696?&auto=format&fit=crop&w=1200&q=80"
-            alt="A house in a forest"
-            style={{
-              objectFit: "cover",
-              width: "50%",
-              height: "50%",
-              borderRadius: "var(--radius-2)",
-            }}
-            className="mx-auto mt-5"
+        <div className="h-[300px] overflow-y-scroll">
+          <AspectRatio ratio={16 / 9}>
+            <img
+              src="https://images.unsplash.com/photo-1479030160180-b1860951d696?&auto=format&fit=crop&w=1200&q=80"
+              alt="A house in a forest"
+              style={{
+                objectFit: "cover",
+                width: "50%",
+                height: "50%",
+                borderRadius: "var(--radius-2)",
+              }}
+              className="mx-auto mt-5"
+            />
+          </AspectRatio>
+        </div>
+      </div>
+      <div className="mt-5 text-center">
+        <p className="font-semibold text-xl">Avatar</p>
+        <div className="flex items-center justify-center mt-5">
+          <Avatar
+            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
+            fallback="S"
+            size="6"
+            mx="3"
           />
-        </AspectRatio>
+          <Avatar size="6" mx="3" fallback="S" />
+        </div>
       </div>
     </main>
   );
