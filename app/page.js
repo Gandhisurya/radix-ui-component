@@ -16,11 +16,13 @@ import {
   TextField,
   HoverCard,
   Heading,
+  IconButton,
 } from "@radix-ui/themes";
 
 import {
   ExclamationTriangleIcon,
   InfoCircledIcon,
+  MagnifyingGlassIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
@@ -263,7 +265,7 @@ export default function Home() {
             <HoverCard.Trigger>
               <Link
                 className="underline"
-                // href="https://twitter.com/radix_ui"
+                href="https://twitter.com/radix_ui"
                 target="_blank"
               >
                 @radix_ui
@@ -294,6 +296,14 @@ export default function Home() {
             </HoverCard.Content>
           </HoverCard.Root>{" "}
           for updates.
+        </Text>
+      </div>
+      <div className="my-10 mx-auto">
+        <IconButton onClick={() => alert("april fool")}>
+          <MagnifyingGlassIcon width="18" height="18" />
+        </IconButton>
+        <Text className="font-semibold" ml="3">
+          search
         </Text>
       </div>
     </main>
