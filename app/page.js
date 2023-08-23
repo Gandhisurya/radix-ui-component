@@ -21,6 +21,7 @@ import {
   Popover,
   Grid,
   Tabs,
+  TextArea,
 } from "@radix-ui/themes";
 
 import {
@@ -426,6 +427,14 @@ export default function Home() {
             </Tabs.Content>
           </Box>
         </Tabs.Root>
+      </div>
+      <div className="my-10 mx-auto w-[90vw] sm:w-[600px] ">
+        <TextArea
+          size="2" //default 2 1 to 3
+          variant="soft" // "classic" | "surface" | "soft"
+          color="blue"
+          placeholder="Reply to comment…"
+        />
       </div>
     </main>
   );
