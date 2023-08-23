@@ -436,6 +436,25 @@ export default function Home() {
           placeholder="Reply to comment…"
         />
       </div>
+      <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
+        <TextField.Root
+          size="3"
+          variant="soft" // "classic" | "surface" | "soft"
+          color="blue"
+          radius="medium" // "none" | "small" | "medium" | "large" | "full"
+        >
+          <TextField.Slot color="tomato" gap="4">
+            <MagnifyingGlassIcon height="16" width="16" />
+          </TextField.Slot>
+          <TextField.Input
+            size="2"
+            variant="soft" //"classic" | "surface" | "soft"
+            color="bronze"
+            radius="large" //"none" | "small" | "medium" | "large" | "full"
+            placeholder="Search the docs…"
+          />
+        </TextField.Root>
+      </div>
     </main>
   );
 }
