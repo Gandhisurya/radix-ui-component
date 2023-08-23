@@ -19,7 +19,17 @@ export default function Home() {
             Hello from Radix Themes :)
           </Text>
           <div className="mx-auto hover:scale-110 transition-transform  ">
-            <Button mt="3" width="5" onClick={() => alert(`april fool`)}>
+            <Button
+              size="2"
+              variant="soft" // "classic"  | "solid"  | "soft"  | "surface"  | "outline" "ghost"
+              color="amber"
+              highContrast={false} // true , false
+              radius="small" //"none" | "small" | "medium" | "large" | "full"
+              mt="3"
+              height="5"
+              width="5"
+              onClick={() => alert(`april fool`)}
+            >
               Let's go
             </Button>
           </div>
@@ -93,11 +103,15 @@ export default function Home() {
             radius="medium"
             variant="solid"
             color="orange"
-            size="2"
+            // size="2"
           >
             In progress
           </Badge>
-          <Badge size="1" variant="surface" color="blue">
+          <Badge
+            // size="1"
+            variant="surface"
+            color="blue"
+          >
             In review
           </Badge>
           <Badge variant="soft" color="cyan">
