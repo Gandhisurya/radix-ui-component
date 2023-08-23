@@ -14,12 +14,15 @@ import {
   Checkbox,
   Dialog,
   TextField,
+  HoverCard,
+  Heading,
 } from "@radix-ui/themes";
 
 import {
   ExclamationTriangleIcon,
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -108,6 +111,7 @@ export default function Home() {
         </div>
       </div>
       <div className="my-10 mx-auto">
+        <p className="font-semibold text-xl mb-5 text-center">Badge</p>
         <Flex gap="4">
           <Badge
             highContrast={false}
@@ -134,6 +138,7 @@ export default function Home() {
         </Flex>
       </div>
       <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
+        <p className="font-semibold text-xl mb-5 text-center">Callout</p>
         <Callout.Root
           size="1"
           variant="surface" //"soft" | "surface" | "outline"
@@ -152,6 +157,8 @@ export default function Home() {
         </Callout.Root>
       </div>
       <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
+        <p className="font-semibold text-xl mb-5 text-center">Card</p>
+
         <Card
           variant="classic" //"surface" | "classic" | "ghost"
         >
@@ -174,6 +181,8 @@ export default function Home() {
         </Card>
       </div>
       <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
+        <p className="font-semibold text-xl mb-5 text-center">Checkbox</p>
+
         <Text size="2">
           <Flex direction="column" gap="2">
             <Flex align="center" gap="2">
@@ -198,6 +207,8 @@ export default function Home() {
         </Text>
       </div>
       <div className="my-10 mx-auto">
+        <p className="font-semibold text-xl mb-5 text-center">Dialog</p>
+
         <Dialog.Root>
           <Dialog.Trigger>
             <Button>Edit profile</Button>
@@ -242,6 +253,48 @@ export default function Home() {
             </Flex>
           </Dialog.Content>
         </Dialog.Root>
+      </div>
+      <div className="my-10 mx-auto">
+        <p className="font-semibold text-xl mb-5 text-center">HoverCard</p>
+
+        <Text>
+          Follow{" "}
+          <HoverCard.Root>
+            <HoverCard.Trigger>
+              <Link
+                className="underline"
+                // href="https://twitter.com/radix_ui"
+                target="_blank"
+              >
+                @radix_ui
+              </Link>
+            </HoverCard.Trigger>
+            <HoverCard.Content>
+              <Flex gap="4">
+                <Avatar
+                  size="3"
+                  fallback="R"
+                  radius="full"
+                  src="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
+                />
+                <Box>
+                  <Heading size="3" as="h3">
+                    Radix
+                  </Heading>
+                  <Text as="div" size="2" color="gray">
+                    @radix_ui
+                  </Text>
+
+                  <Text as="div" size="2" style={{ maxWidth: 300 }} mt="3">
+                    React components, icons, and colors for building
+                    high-quality, accessible UI.
+                  </Text>
+                </Box>
+              </Flex>
+            </HoverCard.Content>
+          </HoverCard.Root>{" "}
+          for updates.
+        </Text>
       </div>
     </main>
   );
