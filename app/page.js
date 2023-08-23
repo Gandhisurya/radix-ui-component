@@ -1,10 +1,10 @@
 "use client";
 
-import { Flex, Text, Button, AlertDialog } from "@radix-ui/themes";
+import { Flex, Text, Button, AlertDialog, AspectRatio } from "@radix-ui/themes";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col w-full">
       <div className="max-w-[500px] mx-auto">
         <Flex mt="6" direction="column" gap="2">
           <Text className="text-2xl font-semibold">
@@ -43,6 +43,22 @@ export default function Home() {
             </Flex>
           </AlertDialog.Content>
         </AlertDialog.Root>
+      </div>
+      <div className="mt-12 text-center">
+        <p className="text-xl font-semibold">Aspect Ratio</p>
+        <AspectRatio ratio={16 / 9}>
+          <img
+            src="https://images.unsplash.com/photo-1479030160180-b1860951d696?&auto=format&fit=crop&w=1200&q=80"
+            alt="A house in a forest"
+            style={{
+              objectFit: "cover",
+              width: "50%",
+              height: "50%",
+              borderRadius: "var(--radius-2)",
+            }}
+            className="mx-auto mt-5"
+          />
+        </AspectRatio>
       </div>
     </main>
   );
