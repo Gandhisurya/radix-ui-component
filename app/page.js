@@ -36,7 +36,7 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export default function Home() {
+export default function Main() {
   const [value, setValue] = React.useState(null);
 
   const image =
