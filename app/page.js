@@ -84,9 +84,24 @@ export default function Home() {
       </div>
       <div className="my-10 mx-auto">
         <Flex gap="4">
-          <Badge color="orange">In progress</Badge>
-          <Badge color="blue">In review</Badge>
-          <Badge color="green">Complete</Badge>
+          <Badge
+            highContrast={false}
+            radius="medium"
+            variant="solid"
+            color="orange"
+            size="2"
+          >
+            In progress
+          </Badge>
+          <Badge size="1" variant="surface" color="blue">
+            In review
+          </Badge>
+          <Badge variant="soft" color="cyan">
+            All most done
+          </Badge>
+          <Badge variant="outline" color="green">
+            Complete
+          </Badge>
         </Flex>
       </div>
     </main>
