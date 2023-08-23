@@ -22,6 +22,7 @@ import {
   Grid,
   Tabs,
   TextArea,
+  Tooltip,
 } from "@radix-ui/themes";
 
 import {
@@ -30,6 +31,7 @@ import {
   InfoCircledIcon,
   Link1Icon,
   MagnifyingGlassIcon,
+  PlusIcon,
   Share2Icon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
@@ -454,6 +456,13 @@ export default function Home() {
             placeholder="Search the docs…"
           />
         </TextField.Root>
+      </div>
+      <div className="my-10 mx-auto">
+        <Tooltip content="Add to library">
+          <IconButton radius="full">
+            <PlusIcon />
+          </IconButton>
+        </Tooltip>
       </div>
     </main>
   );
