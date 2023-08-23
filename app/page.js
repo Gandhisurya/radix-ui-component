@@ -7,6 +7,7 @@ import {
   AlertDialog,
   AspectRatio,
   Avatar,
+  Badge,
 } from "@radix-ui/themes";
 
 export default function Home() {
@@ -80,6 +81,13 @@ export default function Home() {
           />
           <Avatar size="6" mx="3" fallback="S" />
         </div>
+      </div>
+      <div className="my-10 mx-auto">
+        <Flex gap="4">
+          <Badge color="orange">In progress</Badge>
+          <Badge color="blue">In review</Badge>
+          <Badge color="green">Complete</Badge>
+        </Flex>
       </div>
     </main>
   );
