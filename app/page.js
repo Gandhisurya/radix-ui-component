@@ -11,6 +11,8 @@ import {
   Callout,
 } from "@radix-ui/themes";
 
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+
 export default function Home() {
   return (
     <main className="flex flex-col w-full">
@@ -123,8 +125,13 @@ export default function Home() {
           </Badge>
         </Flex>
       </div>
-      <div className="my-10 mx-auto">
-        <Callout.Root>
+      <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
+        <Callout.Root
+          size="1"
+          variant="surface" //"soft" | "surface" | "outline"
+          color="red"
+          // highContrast={true}
+        >
           <Callout.Icon>
             <InfoCircledIcon />
           </Callout.Icon>
