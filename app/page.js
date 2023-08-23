@@ -11,6 +11,7 @@ import {
   Callout,
   Card,
   Box,
+  Checkbox,
 } from "@radix-ui/themes";
 
 import {
@@ -149,7 +150,9 @@ export default function Home() {
         </Callout.Root>
       </div>
       <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
-        <Card>
+        <Card
+          variant="classic" //"surface" | "classic" | "ghost"
+        >
           <Flex gap="3" align="center">
             <Avatar
               size="3"
@@ -167,6 +170,30 @@ export default function Home() {
             </Box>
           </Flex>
         </Card>
+      </div>
+      <div className="my-10 mx-auto w-[90vw] sm:w-[600px]">
+        <Text size="2">
+          <Flex direction="column" gap="2">
+            <Flex align="center" gap="2">
+              <Checkbox id="checkbox-7" />
+              <label htmlFor="checkbox-7">Not checked</label>
+            </Flex>
+            <Flex align="center" gap="2">
+              <Checkbox id="checkbox-8" defaultChecked />
+              <label htmlFor="checkbox-8">Checked</label>
+            </Flex>
+
+            <Flex align="center" gap="2">
+              <Checkbox id="checkbox-9" disabled />
+              <label htmlFor="checkbox-9">Disabled</label>
+            </Flex>
+
+            <Flex align="center" gap="2">
+              <Checkbox id="checkbox-10" defaultChecked disabled />
+              <label htmlFor="checkbox-10">Disabled checked</label>
+            </Flex>
+          </Flex>
+        </Text>
       </div>
     </main>
   );
