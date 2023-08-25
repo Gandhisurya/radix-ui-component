@@ -2,10 +2,10 @@ import React from "react";
 
 function NavBar() {
   return (
-    <div className="w-full h-20 flex justify-between items-center px-5 border-b-[1px] fixed top-0 left-0 right-0 font-next">
+    <div className="w-full h-20 flex justify-between items-center px-5 border-b-[1px] fixed font-next z-10">
       <div className="">
         <svg
-          className="h-7"
+          className="h-7 hover:scale-110 transition-transform cursor-pointer"
           viewBox="0 0 76 24"
           fill="currentcolor"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ function NavBar() {
       </div>
       <div className="flex">
         <svg
-          className="mx-2 h-7 hover:scale-110 hover:text-slate-600 transition-transform cursor-pointer"
+          className="mx-2 h-6 hover:scale-110 hover:text-slate-600 transition-transform cursor-pointer"
           viewBox="0 0 15 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ function NavBar() {
           ></path>
         </svg>
         <svg
-          className="mx-2 h-7 hover:scale-110 hover:text-sky-500 transition-transform cursor-pointer"
+          className="mx-2 h-6 hover:scale-110 hover:text-sky-500 transition-transform cursor-pointer"
           viewBox="0 0 15 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
