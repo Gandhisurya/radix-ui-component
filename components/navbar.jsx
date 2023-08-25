@@ -2,7 +2,7 @@ import React from "react";
 
 function NavBar() {
   return (
-    <div className="w-full h-20 flex justify-between items-center px-5 bg-zinc-100">
+    <div className="w-full h-20 flex justify-between items-center px-5 border-b-[1px] fixed top-0 left-0 right-0 font-next">
       <div className="">
         <svg
           className="h-7"
