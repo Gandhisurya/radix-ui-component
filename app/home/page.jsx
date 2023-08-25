@@ -5,7 +5,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="relative w-full flex flex-col overflow-y-hidden h-screen font-next">
-      <div className="mt-60">
+      <div className="mt-64">
         <p className="text-center text-5xl font-bold px-56 mx-auto">
           Radix Themes is an open-source component library
         </p>
@@ -24,15 +24,49 @@ export default function Home() {
           .
         </p>
       </div>
-      <div className="mx-auto mt-10">
-        <button className="w-[280px] mx-3 h-12 border rounded-xl bg-white font-semibold text-xl hover:scale-105 transition-transform">
-          Get Started
-        </button>
-        <button className="w-[280px] mx-3 h-12 border rounded-xl bg-white font-semibold text-xl hover:scale-105 transition-transform">
-          Get Started
-        </button>
+      <div className="mx-auto mt-10 flex items-center">
+        <div className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+          <button className="relative w-[250px] h-12 rounded-xl bg-yellow-50 font-semibold text-lg flex items-center justify-center">
+            Get Started
+            <svg
+              className="h-5 ml-3"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                fill="currentColor"
+                fillRule="evenodd"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5">
+          <div class="absolute px-5 -inset-0.5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+          <button className="relative w-[250px] h-12 bg-yellow-50 rounded-xl font-semibold text-lg flex items-center justify-center">
+            Learn More
+            <svg
+              className="ml-3 h-5 hover:ease-out"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 2H8V7H13V2.5C13 2.22386 12.7761 2 12.5 2ZM13 8H8V13H12.5C12.7761 13 13 12.7761 13 12.5V8ZM7 7V2H2.5C2.22386 2 2 2.22386 2 2.5V7H7ZM2 8V12.5C2 12.7761 2.22386 13 2.5 13H7V8H2ZM2.5 1C1.67157 1 1 1.67157 1 2.5V12.5C1 13.3284 1.67157 14 2.5 14H12.5C13.3284 14 14 13.3284 14 12.5V2.5C14 1.67157 13.3284 1 12.5 1H2.5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
-      <div className="-z-50 absolute inset-0 blur-3xl opacity-50 bg-gradient-to-r from-pink-200 to-purple-200  h-screen filter brightness-100" />
+      <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+      <div class="absolute top-32 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-10 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
     </div>
   );
 }
