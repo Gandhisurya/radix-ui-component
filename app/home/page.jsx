@@ -1,22 +1,36 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import Animation from "@/components/animation";
 
 import { motion } from "framer-motion";
 
 export default function Home() {
   const varient = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 30 },
     show: {
       opacity: 1,
+      y: 0,
       transition: {
         staggerChildren: 0.3,
       },
     },
   };
 
-  const images = {
+  const imagex = {
+    hidden: {
+      opacity: 0,
+      x: -30,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.75,
+      },
+    },
+  };
+
+  const imagey = {
     hidden: {
       opacity: 0,
       x: 30,
@@ -25,23 +39,23 @@ export default function Home() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.75,
       },
     },
   };
 
   return (
     <div className="relative w-full flex flex-col overflow-y-hidden h-screen font-next">
-      <motion.div
-        variants={varient}
-        initial="hidden"
-        animate="show"
-        className="mt-64"
-      >
-        <p className="text-center text-5xl font-bold px-56 mx-auto">
+      <div className="mt-64">
+        <motion.p
+          variants={varient}
+          initial="hidden"
+          animate="show"
+          className="text-center text-5xl font-bold px-56 mx-auto"
+        >
           Radix Themes is an open-source component library
-        </p>
-        <div>
+        </motion.p>
+        <motion.div variants={varient} initial="hidden" animate="show">
           <p className="mt-8 font-medium text-xl text-center">
             optimized for fast development, easy maintenance, and accessibility.
           </p>
@@ -56,11 +70,11 @@ export default function Home() {
             </Link>
             .
           </p>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
       <div className="mx-auto mt-10 flex items-center">
         <motion.div
-          variants={images}
+          variants={imagex}
           initial="hidden"
           animate="show"
           className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5"
@@ -84,7 +98,7 @@ export default function Home() {
           </button>
         </motion.div>
         <motion.div
-          variants={images}
+          variants={imagey}
           initial="hidden"
           animate="show"
           className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5"
