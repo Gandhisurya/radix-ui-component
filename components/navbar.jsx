@@ -6,8 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function NavBar() {
   const icon = {
-    rest: { rotate: 0 },
-    hover: { rotate: 360, transition: { duration: 0.5 } },
+    rest: {
+      rotate: 0,
+      scale: 1,
+    },
+    hover: {
+      scale: 1.1,
+      rotate: 360,
+      transition: { duration: 0.5 },
+    },
+    pressed: { scale: 0.95 },
   };
   return (
     <div className="w-full h-20 flex justify-between items-center px-10 border-b-[1px] fixed font-next z-10">
@@ -50,7 +58,8 @@ function NavBar() {
             variants={icon}
             initial="rest"
             whileHover="hover"
-            className="mx-2 h-6 hover:text-slate-600 cursor-pointer"
+            whileTap="pressed"
+            className="mx-5 h-6 hover:text-slate-600 cursor-pointer"
             viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +77,8 @@ function NavBar() {
             variants={icon}
             initial="rest"
             whileHover="hover"
-            className="mx-2 h-6 hover:text-sky-500 cursor-pointer"
+            whileTap="pressed"
+            className="mx-5 h-6 hover:text-sky-500 cursor-pointer"
             viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +96,8 @@ function NavBar() {
             variants={icon}
             initial="rest"
             whileHover="hover"
-            className="mx-2 h-6 hover:text-purple-800 cursor-pointer"
+            whileTap="pressed"
+            className="mx-5 h-6 hover:text-purple-800 cursor-pointer"
             viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
