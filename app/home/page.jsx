@@ -2,30 +2,48 @@
 import Link from "next/link";
 import React from "react";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
     <div className="relative w-full flex flex-col overflow-y-hidden h-screen font-next">
       <div className="mt-64">
-        <p className="text-center text-5xl font-bold px-56 mx-auto">
+        <motion.p
+          initial={{ x: -300 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeIn", duration: 0.5 }}
+          className="text-center text-5xl font-bold px-56 mx-auto"
+        >
           Radix Themes is an open-source component library
-        </p>
-        <p className="mt-8 font-medium text-xl text-center">
-          optimized for fast development, easy maintenance, and accessibility.
-        </p>
-        <p className="text-center font-medium text-xl">
-          Maintained by{" "}
-          <Link
-            href="https://github.com/workos"
-            className="font-semibold hover:text-sky-500 transition-transform"
-            target="_blank"
-          >
-            @workos
-          </Link>
-          .
-        </p>
+        </motion.p>
+        <motion.div
+          initial={{ x: 300 }}
+          animate={{ x: -0 }}
+          transition={{ ease: "easeIn", duration: 0.5 }}
+        >
+          <p className="mt-8 font-medium text-xl text-center">
+            optimized for fast development, easy maintenance, and accessibility.
+          </p>
+          <p className="text-center font-medium text-xl">
+            Maintained by{" "}
+            <Link
+              href="https://github.com/workos"
+              className="font-semibold hover:text-sky-500 transition-transform"
+              target="_blank"
+            >
+              @workos
+            </Link>
+            .
+          </p>
+        </motion.div>
       </div>
       <div className="mx-auto mt-10 flex items-center">
-        <div className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5">
+        <motion.div
+          initial={{ y: 200 }}
+          animate={{ y: 0 }}
+          transition={{ ease: "easeIn", duration: 0.5 }}
+          className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5"
+        >
           <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
           <button className="relative w-[250px] h-12 rounded-xl bg-yellow-50 font-semibold text-lg flex items-center justify-center">
             Get Started
@@ -43,8 +61,13 @@ export default function Home() {
               ></path>
             </svg>
           </button>
-        </div>
-        <div className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5">
+        </motion.div>
+        <motion.div
+          initial={{ y: 200 }}
+          animate={{ y: 0 }}
+          transition={{ ease: "easeIn", duration: 0.5 }}
+          className="relative group hover:scale-105 transform transition-transform ease-in duration-200 mx-5"
+        >
           <div className="absolute px-5 -inset-0.5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
           <button className="relative w-[250px] h-12 bg-yellow-50 rounded-xl font-semibold text-lg flex items-center justify-center">
             Learn More
@@ -62,7 +85,7 @@ export default function Home() {
               ></path>
             </svg>
           </button>
-        </div>
+        </motion.div>
       </div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
       <div className="absolute top-32 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
