@@ -6,16 +6,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
-import NavBar from "@/components/navbar";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Theme>
-          <NavBar />
-          {children}
-        </Theme>
+        <Theme>{children}</Theme>
       </body>
     </html>
   );
