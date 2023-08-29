@@ -42,7 +42,7 @@ function NavBar() {
       </Link>
       <div className="flex items-center">
         <p
-          onClick={() => router?.push("/home/doc")}
+          onClick={() => router?.push("/home/doc/getstarted")}
           className="mx-3 font-semibold cursor-pointer hover:scale-110 transition-transform"
         >
           Get Started
