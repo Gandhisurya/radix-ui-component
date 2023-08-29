@@ -10,3 +10,7 @@
     animation-delay: 4s;
   }
 }
+
+div::-webkit-scrollbar {
+  display: none;
+}
