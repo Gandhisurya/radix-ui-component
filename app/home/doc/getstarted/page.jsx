@@ -26,7 +26,9 @@ function GetStarted() {
         <p className="font-semibold text-2xl">Installation Steps</p>
         <div className="flex flex-col mt-5">
           <p className="font-semibold text-lg">1. Install the Radix Theme</p>
-          <p className="mt-3">Copy the below code and paste in your terminal</p>
+          <p className="mt-3 font-medium">
+            Copy the below code and paste in your terminal
+          </p>
           <div className="max-w-[600px] border rounded-lg p-1 mt-5 bg-indigo-50">
             <Tabs.Root defaultValue="account">
               <Tabs.List>
@@ -62,7 +64,7 @@ function GetStarted() {
         </div>
         <div className="flx flex-col mt-5">
           <p className="font-semibold text-lg">2. Import Radix CSS file</p>
-          <p className="mt-3">
+          <p className="mt-3 font-medium">
             copy and paste the below code in your root file like
             <HoverCard.Root>
               <HoverCard.Trigger>
@@ -89,7 +91,7 @@ function GetStarted() {
               </HoverCard.Content>
             </HoverCard.Root>
           </p>
-          <p className="p-3 border rounded-lg max-w-[600px] bg-indigo-50 font-medium mt-5">
+          <p className="p-3 border rounded-lg max-w-[600px] bg-indigo-50 font-semibold mt-5">
             import '@radix-ui/themes/styles.css';
           </p>
         </div>
@@ -97,7 +99,7 @@ function GetStarted() {
           <p className="font-semibold text-lg">
             3. Add Theme Component and wrap the children
           </p>
-          <p className="font">
+          <p className="font-medium mt-3">
             Add{" "}
             <span className="font-medium p-1 bg-indigo-50 rounded-lg">
               Theme
@@ -114,6 +116,28 @@ function GetStarted() {
             <p className="mt-2 mx-4 pl-10">{`  </body> `}</p>
             <p className="mt-2 mx-4 pl-6">{` </html> `}</p>
             <p className="mt-2 mx-4">{` ) `}</p>
+            <p className="mt-2 my-6 mx-4">{` }; `}</p>
+          </Code>
+        </div>
+        <div className="flex flex-col mt-5">
+          <p className="font-semibold text-lg">
+            4. Start Build Website with Radix Components
+          </p>
+          <p className="mt-3 font-medium">
+            Now your website is ready to use with Radix Components like the
+            below
+          </p>
+          <Code className="flex flex-col max-w-[600px] my-10">
+            <p className="mt-6 mx-4">{` import React from "react";  `}</p>
+            <p className="mt-6 mx-4">{` import { Flex, Text, Button } from '@radix-ui/themes';  `}</p>
+            <p className="mt-6 mx-4">{``}</p>
+            <p className="mt-2 mx-4">{` export default function Home(){ `}</p>
+            <p className="mt-2 mx-4">{` return ( `}</p>
+            <p className="mt-2 mx-4 pl-6">{`  <Flex direction="column" gap="2"> `}</p>
+            <p className="mt-2 mx-4 pl-10">{`  <Text>Awesome 🚀 Radix Themes :)</Text> `}</p>
+            <p className="mt-2 mx-4 pl-10">{`     <Button>Let's go</Button> `}</p>
+            <p className="mt-2 mx-4 pl-6">{` </Flex> `}</p>
+            <p className="mt-2 mx-4 pl-3">{` ) `}</p>
             <p className="mt-2 my-6 mx-4">{` }; `}</p>
           </Code>
         </div>
