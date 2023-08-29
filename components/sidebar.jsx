@@ -58,7 +58,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/aspectratio"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Aspect Ratio
@@ -67,7 +67,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/avatarbadge"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Avatar Badge
@@ -76,7 +76,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/button"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Button
@@ -85,7 +85,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/callout"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Callout
@@ -94,7 +94,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/card"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Card
@@ -103,7 +103,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/contentbox"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Context box
@@ -112,7 +112,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/contextmenu"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Context Menu
@@ -121,7 +121,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/dialog"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Dialog
@@ -130,7 +130,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/dropdownmenu"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Dropdown Menu
@@ -139,7 +139,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/hovercard"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Hover Card
@@ -148,7 +148,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/iconbutton"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Icon Button
@@ -164,7 +164,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/popover"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Popover
@@ -173,7 +173,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/radiogroup"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Radio Group
@@ -182,7 +182,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/scrollarea"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Scroll Area
@@ -191,7 +191,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/select"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Select
@@ -200,7 +200,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/seperator"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Seperator
@@ -209,7 +209,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/slider"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Slider
@@ -218,7 +218,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/switch"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Switch
@@ -227,7 +227,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/table"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Table
@@ -236,7 +236,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/tabs"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Tabs
@@ -245,7 +245,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/textarea"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Text Area
@@ -254,7 +254,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/textfield"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Text Field
@@ -263,7 +263,7 @@ function Sidebar() {
             className={`${
               path === "/home/doc/tooltip"
                 ? "bg-blue-100 pl-4"
-                : "hover:bg-rose-100"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Tooltip
