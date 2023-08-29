@@ -92,7 +92,7 @@ export default function Home() {
           >
             <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
             <button
-              onClick={() => router?.push("/home/doc")}
+              onClick={() => router?.push("/home/doc/getstarted")}
               className="relative w-[250px] h-12 rounded-xl bg-yellow-50 font-semibold text-lg flex items-center justify-center"
             >
               Get Started

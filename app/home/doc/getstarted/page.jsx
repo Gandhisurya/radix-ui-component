@@ -1,9 +1,20 @@
-import { Box, Tabs, Text } from "@radix-ui/themes";
+"use client";
+import {
+  Avatar,
+  Box,
+  Heading,
+  HoverCard,
+  Tabs,
+  Text,
+  Flex,
+  Code,
+} from "@radix-ui/themes";
+import Link from "next/link";
 import React from "react";
 
 function GetStarted() {
   return (
-    <div className="flex flex-col w-full h-auto over-flow-scroll mx-40">
+    <div className="flex flex-col w-[1200px] h-auto over-flow-scroll mx-40 font-next">
       <div className="mt-20">
         <h1 className="font-semibold text-2xl">Getting started</h1>
         <p className="mt-3">
@@ -16,7 +27,7 @@ function GetStarted() {
         <div className="flex flex-col">
           <p>1. Install the Radix Theme</p>
           <p>Copy the below code and paste in your terminal</p>
-          <div className="max-w-[600px] border rounded-lg p-1 mt-5">
+          <div className="max-w-[600px] border rounded-lg p-1 mt-5 bg-indigo-50">
             <Tabs.Root defaultValue="account">
               <Tabs.List>
                 <Tabs.Trigger value="account" className="font-semibold">
@@ -35,13 +46,11 @@ function GetStarted() {
                     npm install @radix-ui/themes
                   </Text>
                 </Tabs.Content>
-
                 <Tabs.Content value="documents">
                   <Text className="font-semibold" size="2">
                     yarn add @radix-ui/themes
                   </Text>
                 </Tabs.Content>
-
                 <Tabs.Content value="settings">
                   <Text size="2" className="font-semibold">
                     pnpm add @radix-ui/themes
@@ -50,6 +59,61 @@ function GetStarted() {
               </Box>
             </Tabs.Root>
           </div>
+        </div>
+        <div className="flx flex-col">
+          <p>2. Import Radix CSS file</p>
+          <p>
+            copy and paste the below code in your root file like
+            <HoverCard.Root>
+              <HoverCard.Trigger>
+                <b className="ml-2 cursor-pointer">layout.js or layout.jsx</b>
+              </HoverCard.Trigger>
+              <HoverCard.Content className="bg-yellow-500">
+                <div className="flex flex-col">
+                  <img className="w-12" src="/next.svg" />
+                  <Box className="mt-4">
+                    <Code className="flex flex-col">
+                      <p className="mt-2 mx-4">{` import "@radix-ui/themes/styles.css";  `}</p>
+                      <p className="mt-2 mx-4">{` export default function RootLayout({children}){ `}</p>
+                      <p className="mt-2 mx-4">{` return ( `}</p>
+                      <p className="mt-2 mx-4 pl-6">{`  <html lang="en"> `}</p>
+                      <p className="mt-2 mx-4 pl-10">{` <body className=""> `}</p>
+                      <p className="mt-2 mx-4 pl-16">{`    {children} `}</p>
+                      <p className="mt-2 mx-4 pl-10">{`  </body> `}</p>
+                      <p className="mt-2 mx-4 pl-6">{` </html> `}</p>
+                      <p className="mt-2 mx-4">{` ) `}</p>
+                      <p className="my-2 mx-4">{` }; `}</p>
+                    </Code>
+                  </Box>
+                </div>
+              </HoverCard.Content>
+            </HoverCard.Root>
+          </p>
+          <p className="p-3 border rounded-lg max-w-[600px] bg-indigo-50 font-medium mt-5">
+            import '@radix-ui/themes/styles.css';
+          </p>
+        </div>
+        <div>
+          <p className="">3. Add Theme Component and wrap the children</p>
+          <p className="">
+            Add{" "}
+            <span className="font-medium p-1 bg-indigo-50 rounded-lg">
+              Theme
+            </span>{" "}
+            to your application, wrapping the root component inside of body.
+          </p>
+          <Code className="flex flex-col max-w-[600px] my-10">
+            <p className="mt-6 mx-4">{` import "@radix-ui/themes/styles.css";  `}</p>
+            <p className="mt-2 mx-4">{` export default function RootLayout({children}){ `}</p>
+            <p className="mt-2 mx-4">{` return ( `}</p>
+            <p className="mt-2 mx-4 pl-6">{`  <html lang="en"> `}</p>
+            <p className="mt-2 mx-4 pl-10">{` <body className=""> `}</p>
+            <p className="mt-2 mx-4 pl-16">{`    {children} `}</p>
+            <p className="mt-2 mx-4 pl-10">{`  </body> `}</p>
+            <p className="mt-2 mx-4 pl-6">{` </html> `}</p>
+            <p className="mt-2 mx-4">{` ) `}</p>
+            <p className="mt-2 my-6 mx-4">{` }; `}</p>
+          </Code>
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="flex flex-col w-[260px] h-screen border-r-[1px] font-next">
+    <div className="flex flex-col w-[300px] h-screen border-r-[1px] font-next">
       <div className="flex items-center justify-center mt-2 border-b-[1px]">
         <Link href="/home" className="py-4">
           <svg
@@ -60,7 +60,12 @@ function Sidebar() {
       <div className="flex flex-col mt-5 ml-8 h-auto overflow-y-scroll">
         <div className="">
           <p className="font-semibold text-left">Overview</p>
-          <p className={classname}>Get Statred</p>
+          <p
+            className={classname}
+            onClick={() => router?.push("/home/doc/getstarted")}
+          >
+            Get Statred
+          </p>
         </div>
         <div className="my-5">
           <p className="font-semibold text-left">Components</p>
