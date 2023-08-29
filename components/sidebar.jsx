@@ -1,42 +1,14 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 function Sidebar() {
   const router = useRouter();
-  const classname =
-    "text-sm font-medium mt-3 hover:bg-purple-100 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer";
-  const name = [
-    "Alert Dialog",
-    "Aspect Ratio",
-    "Avatar Badge",
-    "Button",
-    "Callout",
-    "Card",
-    "Context box",
-    "Context Menu",
-    "Dialog",
-    "Dropdown Menu",
-    "Hover Card",
-    "Icon Button",
-    "Inset",
-    "Popover",
-    "Radio Group",
-    "Scroll Area",
-    "Select",
-    "Seperator",
-    "Slider",
-    "Switch",
-    "Table",
-    "Tabs",
-    "Text Area",
-    "Text Field",
-    "Tooltip",
-  ];
+  const path = usePathname();
 
   return (
-    <div className="flex flex-col w-[300px] h-screen border-r-[1px] font-next">
+    <div className="flex flex-col w-[300px] h-screen border-r-[1px] font-next static">
       <div className="flex items-center justify-center mt-2 border-b-[1px]">
         <Link href="/home" className="py-4">
           <svg
@@ -61,7 +33,11 @@ function Sidebar() {
         <div className="">
           <p className="font-semibold text-left">Overview</p>
           <p
-            className={classname}
+            className={`${
+              path === "/home/doc/getstarted"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3  rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
             onClick={() => router?.push("/home/doc/getstarted")}
           >
             Get Statred
@@ -69,9 +45,229 @@ function Sidebar() {
         </div>
         <div className="my-5">
           <p className="font-semibold text-left">Components</p>
-          {name?.map((each) => (
-            <p className={classname}>{each}</p>
-          ))}
+          <p
+            className={`${
+              path === "/home/doc/alertdialog"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Alert Dialog
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/aspectratio"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Aspect Ratio
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/avatarbadge"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Avatar Badge
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/button"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Button
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/callout"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Callout
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/card"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Card
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/contentbox"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Context box
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/contextmenu"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Context Menu
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/dialog"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Dialog
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/dropdownmenu"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Dropdown Menu
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/hovercard"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Hover Card
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/iconbutton"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Icon Button
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/inset" ? "bg-blue-100 pl-4" : ""
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Inset
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/popover"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Popover
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/radiogroup"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Radio Group
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/scrollarea"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Scroll Area
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/select"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Select
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/seperator"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Seperator
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/slider"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Slider
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/switch"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Switch
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/table"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Table
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/tabs"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Tabs
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/textarea"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Text Area
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/textfield"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Text Field
+          </p>
+          <p
+            className={`${
+              path === "/home/doc/tooltip"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Tooltip
+          </p>
         </div>
       </div>
     </div>

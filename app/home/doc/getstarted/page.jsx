@@ -14,19 +14,19 @@ import React from "react";
 
 function GetStarted() {
   return (
-    <div className="flex flex-col w-[1200px] h-auto over-flow-scroll mx-40 font-next">
+    <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll mx-40 font-next">
       <div className="mt-20">
-        <h1 className="font-semibold text-2xl">Getting started</h1>
-        <p className="mt-3">
+        <h1 className="font-semibold text-3xl">Getting started</h1>
+        <p className="mt-3 mb-5 font-medium">
           install radix in project by copy the below commad and paste in your
           project terminal with in a minute...
         </p>
       </div>
       <div>
-        <p>Installation Steps</p>
-        <div className="flex flex-col">
-          <p>1. Install the Radix Theme</p>
-          <p>Copy the below code and paste in your terminal</p>
+        <p className="font-semibold text-2xl">Installation Steps</p>
+        <div className="flex flex-col mt-5">
+          <p className="font-semibold text-lg">1. Install the Radix Theme</p>
+          <p className="mt-3">Copy the below code and paste in your terminal</p>
           <div className="max-w-[600px] border rounded-lg p-1 mt-5 bg-indigo-50">
             <Tabs.Root defaultValue="account">
               <Tabs.List>
@@ -60,9 +60,9 @@ function GetStarted() {
             </Tabs.Root>
           </div>
         </div>
-        <div className="flx flex-col">
-          <p>2. Import Radix CSS file</p>
-          <p>
+        <div className="flx flex-col mt-5">
+          <p className="font-semibold text-lg">2. Import Radix CSS file</p>
+          <p className="mt-3">
             copy and paste the below code in your root file like
             <HoverCard.Root>
               <HoverCard.Trigger>
@@ -93,9 +93,11 @@ function GetStarted() {
             import '@radix-ui/themes/styles.css';
           </p>
         </div>
-        <div>
-          <p className="">3. Add Theme Component and wrap the children</p>
-          <p className="">
+        <div className="fle flex-col mt-5">
+          <p className="font-semibold text-lg">
+            3. Add Theme Component and wrap the children
+          </p>
+          <p className="font">
             Add{" "}
             <span className="font-medium p-1 bg-indigo-50 rounded-lg">
               Theme
