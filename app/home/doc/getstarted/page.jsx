@@ -141,6 +141,49 @@ function GetStarted() {
             <p className="mt-2 my-6 mx-4">{` }; `}</p>
           </Code>
         </div>
+        <div className="flex flex-col mt-5">
+          <p className="font-semibold text-2xl ">The Theme Panel</p>
+          <p className="mt-3">
+            {" "}
+            <span className="font-medium p-1 bg-indigo-50 rounded-lg">
+              ThemePanel
+            </span>{" "}
+            is a drop in component that allows you to preview the theme
+            configuration in real time.
+          </p>
+          <Code className="flex flex-col max-w-[600px] my-10">
+            <p className="mt-6 mx-4">{` import "@radix-ui/themes/styles.css";  `}</p>
+            <p className="mt-6 mx-4">{` import { Theme, ThemePanel } from '@radix-ui/themes';  `}</p>
+            <p className="mt-2 mx-4">{` export default function RootLayout({children}){ `}</p>
+            <p className="mt-2 mx-4">{` return ( `}</p>
+            <p className="mt-2 mx-4 pl-6">{`  <html lang="en"> `}</p>
+            <p className="mt-2 mx-4 pl-10">{` <body className=""> `}</p>
+            <p className="mt-2 mx-4 pl-12">{` <Theme> `}</p>
+            <p className="mt-2 mx-4 pl-16">{`    {children} `}</p>
+            <p className="mt-2 mx-4 pl-16">{`    <ThemePanel /> `}</p>
+            <p className="mt-2 mx-4 pl-12">{`  </Theme> `}</p>
+            <p className="mt-2 mx-4 pl-10">{`  </body> `}</p>
+            <p className="mt-2 mx-4 pl-6">{` </html> `}</p>
+            <p className="mt-2 mx-4">{` ) `}</p>
+            <p className="mt-2 my-6 mx-4">{` }; `}</p>
+          </Code>
+          <p className="mt-2 font-medium">
+            You can also use in individual page like the below{" "}
+          </p>
+          <Code className="flex flex-col max-w-[600px] my-10">
+            <p className="mt-6 mx-4">{` import Sidebar from "@/components/sidebar";  `}</p>
+            <p className="mt-6 mx-4">{` import { ThemePanel } from '@radix-ui/themes';  `}</p>
+            <p className="mt-2 mx-4">{` function DocLayout({ children }) { `}</p>
+            <p className="mt-2 mx-4">{` return ( `}</p>
+            <p className="mt-2 mx-4 pl-10">{`  <div className="flex w-full"> `}</p>
+            <p className="mt-2 mx-4 pl-16">{`   <Sidebar /> `}</p>
+            <p className="mt-2 mx-4 pl-16">{`    {children} `}</p>
+            <p className="mt-2 mx-4 pl-16">{`    <ThemePanel /> `}</p>
+            <p className="mt-2 mx-4 pl-10">{` </div> `}</p>
+            <p className="mt-2 mx-4">{` ) `}</p>
+            <p className="mt-2 my-6 mx-4">{` }; `}</p>
+          </Code>
+        </div>
       </div>
     </div>
   );
