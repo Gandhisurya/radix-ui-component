@@ -3,7 +3,10 @@ import { Box, HoverCard, Tabs, Text, Code } from "@radix-ui/themes";
 import Link from "next/link";
 import React from "react";
 
+import { useRouter } from "next/navigation";
+
 function GetStarted() {
+  const router = useRouter();
   return (
     <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
       <div className="mt-20">
@@ -177,7 +180,10 @@ function GetStarted() {
         </div>
         <div className="w-[130px] shadow-lg flex flex-col text-right mb-10 ml-auto rounded-lg p-2">
           <p className="">Next</p>
-          <p className="text-orange-500 cursor-pointer hover:font-medium">
+          <p
+            onClick={() => router?.push("/home/doc/alertdialog")}
+            className="text-orange-500 cursor-pointer hover:font-medium"
+          >
             Alert Dialog
           </p>
         </div>
