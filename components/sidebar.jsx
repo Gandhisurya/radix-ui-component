@@ -86,6 +86,7 @@ function Sidebar() {
             Badge
           </p>
           <p
+            onClick={() => router?.push("/home/doc/button")}
             className={`${
               path === "/home/doc/button"
                 ? "bg-blue-100 pl-4 font-semibold"
