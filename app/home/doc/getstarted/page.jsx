@@ -1,20 +1,11 @@
 "use client";
-import {
-  Avatar,
-  Box,
-  Heading,
-  HoverCard,
-  Tabs,
-  Text,
-  Flex,
-  Code,
-} from "@radix-ui/themes";
+import { Box, HoverCard, Tabs, Text, Code } from "@radix-ui/themes";
 import Link from "next/link";
 import React from "react";
 
 function GetStarted() {
   return (
-    <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll mx-40 font-next">
+    <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
       <div className="mt-20">
         <h1 className="font-semibold text-3xl">Getting started</h1>
         <p className="mt-3 mb-5 font-medium">
@@ -183,6 +174,12 @@ function GetStarted() {
             <p className="mt-2 mx-4">{` ) `}</p>
             <p className="mt-2 my-6 mx-4">{` }; `}</p>
           </Code>
+        </div>
+        <div className="w-[130px] shadow-lg flex flex-col text-right mb-10 ml-auto rounded-lg p-2">
+          <p className="">Next</p>
+          <p className="text-orange-500 cursor-pointer hover:font-medium">
+            Alert Dialog
+          </p>
         </div>
       </div>
     </div>

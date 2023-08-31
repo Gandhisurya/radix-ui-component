@@ -8,7 +8,7 @@ function Sidebar() {
   const path = usePathname();
 
   return (
-    <div className="flex flex-col w-[330px] h-screen border-r-[1px] font-next static">
+    <div className="flex flex-col w-[280px] h-screen border-r-[1px] font-next static">
       <div className="flex items-center justify-center mt-2 border-b-[1px]">
         <Link href="/home" className="py-4">
           <svg
