@@ -66,6 +66,7 @@ function Sidebar() {
             Aspect Ratio
           </p>
           <p
+            onClick={() => router?.push("/home/doc/avatarbadge")}
             className={`${
               path === "/home/doc/avatarbadge"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -73,6 +74,16 @@ function Sidebar() {
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Avatar Badge
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/badge")}
+            className={`${
+              path === "/home/doc/badge"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Badge
           </p>
           <p
             className={`${

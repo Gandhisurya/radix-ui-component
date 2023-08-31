@@ -84,29 +84,6 @@ function Alertdialog() {
   \`\`\`
   `;
 
-  const contentContent = `
-
-  \`\`\`
-  <AlertDialog.Content style={{ maxWidth: 450 }}>
-      <AlertDialog.Title>Logout Account</AlertDialog.Title>
-      <AlertDialog.Description size="2">
-       Are you sure? Do you want do delete your account?
-      </AlertDialog.Description>
-      <Flex gap="3" mt="4" justify="end">
-       <AlertDialog.Cancel>
-         <Button variant="soft" color="gray">
-           Cancel
-         </Button>
-       </AlertDialog.Cancel>
-       <AlertDialog.Action>
-         <Button variant="solid" color="red">
-           Delete
-         </Button>
-       </AlertDialog.Action>
-      </Flex>
-   </AlertDialog.Content>
-  \`\`\`
-  `;
   return (
     <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
       <p className="mt-20 font-semibold text-3xl">Alert Dialog</p>
