@@ -46,6 +46,7 @@ function Sidebar() {
         <div className="my-5">
           <p className="font-semibold text-left">Components</p>
           <p
+            onClick={() => router?.push("/home/doc/alertdialog")}
             className={`${
               path === "/home/doc/alertdialog"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -55,9 +56,10 @@ function Sidebar() {
             Alert Dialog
           </p>
           <p
+            onClick={() => router?.push("/home/doc/aspectratio")}
             className={`${
               path === "/home/doc/aspectratio"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -66,7 +68,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/avatarbadge"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -75,7 +77,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/button"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -84,7 +86,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/callout"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -93,7 +95,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/card"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -102,7 +104,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/contentbox"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -111,7 +113,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/contextmenu"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -120,7 +122,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/dialog"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -129,7 +131,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/dropdownmenu"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -138,7 +140,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/hovercard"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -147,7 +149,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/iconbutton"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -155,7 +157,9 @@ function Sidebar() {
           </p>
           <p
             className={`${
-              path === "/home/doc/inset" ? "bg-blue-100 pl-4" : ""
+              path === "/home/doc/inset"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
             Inset
@@ -172,7 +176,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/radiogroup"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -181,7 +185,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/scrollarea"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -190,7 +194,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/select"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -199,7 +203,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/seperator"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -208,7 +212,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/slider"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -217,7 +221,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/switch"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -226,7 +230,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/table"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -235,7 +239,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/tabs"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -244,7 +248,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/textarea"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -253,7 +257,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/textfield"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >
@@ -262,7 +266,7 @@ function Sidebar() {
           <p
             className={`${
               path === "/home/doc/tooltip"
-                ? "bg-blue-100 pl-4"
+                ? "bg-blue-100 pl-4 font-semibold"
                 : "hover:bg-rose-100 font-medium"
             } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
           >

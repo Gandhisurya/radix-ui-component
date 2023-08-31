@@ -4,7 +4,10 @@ import React from "react";
 
 import ReactMarkdown from "react-markdown";
 
+import { useRouter } from "next/navigation";
+
 function Alertdialog() {
+  const router = useRouter();
   const logoutContent = `
 
   \`\`\`
@@ -211,6 +214,15 @@ function Alertdialog() {
             {deleteContent}
           </ReactMarkdown>
         </div>
+      </div>
+      <div className="w-[130px] shadow-lg flex flex-col text-right mb-10 ml-auto rounded-lg p-2">
+        <p className="">Next</p>
+        <p
+          onClick={() => router?.push("/home/doc/aspectratio")}
+          className="text-orange-500 cursor-pointer hover:font-medium"
+        >
+          Alert Dialog
+        </p>
       </div>
     </div>
   );
