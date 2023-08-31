@@ -3,7 +3,6 @@ import { Badge, Button, Table } from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
-import { BookmarkIcon } from "@radix-ui/react-icons";
 
 function Buttons() {
   const router = useRouter();
