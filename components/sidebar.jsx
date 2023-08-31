@@ -96,6 +96,7 @@ function Sidebar() {
             Button
           </p>
           <p
+            onClick={() => router?.push("/home/doc/callout")}
             className={`${
               path === "/home/doc/callout"
                 ? "bg-blue-100 pl-4 font-semibold"
