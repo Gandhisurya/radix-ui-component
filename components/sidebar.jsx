@@ -106,6 +106,7 @@ function Sidebar() {
             Callout
           </p>
           <p
+            onClick={() => router?.push("/home/doc/card")}
             className={`${
               path === "/home/doc/card"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -115,6 +116,7 @@ function Sidebar() {
             Card
           </p>
           <p
+            onClick={() => router?.push("/home/doc/contentbox")}
             className={`${
               path === "/home/doc/contentbox"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -124,6 +126,7 @@ function Sidebar() {
             Context box
           </p>
           <p
+            onClick={() => router?.push("/home/doc/contextmenu")}
             className={`${
               path === "/home/doc/contextmenu"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -133,6 +136,7 @@ function Sidebar() {
             Context Menu
           </p>
           <p
+            onClick={() => router?.push("/home/doc/dialog")}
             className={`${
               path === "/home/doc/dialog"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -142,6 +146,7 @@ function Sidebar() {
             Dialog
           </p>
           <p
+            onClick={() => router?.push("/home/doc/dropdownmenu")}
             className={`${
               path === "/home/doc/dropdownmenu"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -151,6 +156,7 @@ function Sidebar() {
             Dropdown Menu
           </p>
           <p
+            onClick={() => router?.push("/home/doc/hovercard")}
             className={`${
               path === "/home/doc/hovercard"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -160,6 +166,7 @@ function Sidebar() {
             Hover Card
           </p>
           <p
+            onClick={() => router?.push("/home/doc/iconbutton")}
             className={`${
               path === "/home/doc/iconbutton"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -169,6 +176,7 @@ function Sidebar() {
             Icon Button
           </p>
           <p
+            onClick={() => router?.push("/home/doc/inset")}
             className={`${
               path === "/home/doc/inset"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -178,6 +186,7 @@ function Sidebar() {
             Inset
           </p>
           <p
+            onClick={() => router?.push("/home/doc/popover")}
             className={`${
               path === "/home/doc/popover"
                 ? "bg-blue-100 pl-4"
@@ -187,6 +196,7 @@ function Sidebar() {
             Popover
           </p>
           <p
+            onClick={() => router?.push("/home/doc/radiogroup")}
             className={`${
               path === "/home/doc/radiogroup"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -196,6 +206,7 @@ function Sidebar() {
             Radio Group
           </p>
           <p
+            onClick={() => router?.push("/home/doc/scrollarea")}
             className={`${
               path === "/home/doc/scrollarea"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -205,6 +216,7 @@ function Sidebar() {
             Scroll Area
           </p>
           <p
+            onClick={() => router?.push("/home/doc/select")}
             className={`${
               path === "/home/doc/select"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -214,6 +226,7 @@ function Sidebar() {
             Select
           </p>
           <p
+            onClick={() => router?.push("/home/doc/seperator")}
             className={`${
               path === "/home/doc/seperator"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -223,6 +236,7 @@ function Sidebar() {
             Seperator
           </p>
           <p
+            onClick={() => router?.push("/home/doc/slider")}
             className={`${
               path === "/home/doc/slider"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -232,6 +246,7 @@ function Sidebar() {
             Slider
           </p>
           <p
+            onClick={() => router?.push("/home/doc/switch")}
             className={`${
               path === "/home/doc/switch"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -241,6 +256,7 @@ function Sidebar() {
             Switch
           </p>
           <p
+            onClick={() => router?.push("/home/doc/table")}
             className={`${
               path === "/home/doc/table"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -250,6 +266,7 @@ function Sidebar() {
             Table
           </p>
           <p
+            onClick={() => router?.push("/home/doc/tabs")}
             className={`${
               path === "/home/doc/tabs"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -259,6 +276,7 @@ function Sidebar() {
             Tabs
           </p>
           <p
+            onClick={() => router?.push("/home/doc/textarea")}
             className={`${
               path === "/home/doc/textarea"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -268,6 +286,7 @@ function Sidebar() {
             Text Area
           </p>
           <p
+            onClick={() => router?.push("/home/doc/textfield")}
             className={`${
               path === "/home/doc/textfield"
                 ? "bg-blue-100 pl-4 font-semibold"
@@ -277,6 +296,7 @@ function Sidebar() {
             Text Field
           </p>
           <p
+            onClick={() => router?.push("/home/doc/tooltip")}
             className={`${
               path === "/home/doc/tooltip"
                 ? "bg-blue-100 pl-4 font-semibold"
