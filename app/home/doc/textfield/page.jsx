@@ -139,7 +139,6 @@ function TextField() {
                 application.
               </Callout.Text>
             </Callout.Root>
-
             <Callout.Root size="2">
               <Callout.Icon>
                 <InfoCircledIcon />
@@ -149,7 +148,6 @@ function TextField() {
                 application.
               </Callout.Text>
             </Callout.Root>
-
             <Callout.Root size="1">
               <Callout.Icon>
                 <InfoCircledIcon />

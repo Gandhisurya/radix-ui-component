@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Box, Card, Flex, Table } from "@radix-ui/themes";
+import { Avatar, Box, Card, Flex, Table, Text } from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
