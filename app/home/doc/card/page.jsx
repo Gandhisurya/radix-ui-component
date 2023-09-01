@@ -1,5 +1,5 @@
 "use client";
-import { Button, Callout, Link, Table } from "@radix-ui/themes";
+import { Avatar, Box, Card, Flex, Table } from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
@@ -113,13 +113,13 @@ function CardPage() {
               </Table.Row>
               <Table.Row>
                 <Table.RowHeaderCell>size</Table.RowHeaderCell>
-                <Table.Cell>Responsive | "1" | "2" | "3" |</Table.Cell>
-                <Table.Cell>"2"</Table.Cell>
+                <Table.Cell>Responsive | "1" | "2" | "3" | "4" |</Table.Cell>
+                <Table.Cell>"1"</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.RowHeaderCell>variant</Table.RowHeaderCell>
-                <Table.Cell>enum</Table.Cell>
-                <Table.Cell>"solid"</Table.Cell>
+                <Table.Cell>"surface" | "classic" | "ghost"</Table.Cell>
+                <Table.Cell>"surface"</Table.Cell>
               </Table.Row>
             </Table.Body>
           </Table.Root>
@@ -130,35 +130,45 @@ function CardPage() {
         <p className="font-semibold my-3 text-xl">1. Size</p>
         <div>
           <div className="flex flex-col items-start space-y-4">
-            <Callout.Root size="3">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-
-            <Callout.Root size="2">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-
-            <Callout.Root size="1">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
+            <Card size="1" style={{ width: 350 }}>
+              <Flex gap="3" align="center">
+                <Avatar size="3" radius="full" fallback="T" color="indigo" />
+                <Box>
+                  <Text as="div" size="2" weight="bold">
+                    Teodros Girmay
+                  </Text>
+                  <Text as="div" size="2" color="gray">
+                    Engineering
+                  </Text>
+                </Box>
+              </Flex>
+            </Card>
+            <Card size="2" style={{ width: 425 }}>
+              <Flex gap="4" align="center">
+                <Avatar size="4" radius="full" fallback="T" color="indigo" />
+                <Box>
+                  <Text as="div" weight="bold">
+                    Teodros Girmay
+                  </Text>
+                  <Text as="div" color="gray">
+                    Engineering
+                  </Text>
+                </Box>
+              </Flex>
+            </Card>
+            <Card size="3" style={{ width: 500 }}>
+              <Flex gap="4" align="center">
+                <Avatar size="5" radius="full" fallback="T" color="indigo" />
+                <Box>
+                  <Text as="div" size="4" weight="bold">
+                    Teodros Girmay
+                  </Text>
+                  <Text as="div" size="4" color="gray">
+                    Engineering
+                  </Text>
+                </Box>
+              </Flex>
+            </Card>
           </div>
           <p className="mt-3 font-semibold">Code</p>
           <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
@@ -171,33 +181,23 @@ function CardPage() {
             Use the variant properties to control the visual style.
           </p>
           <div className="mt-3 flex flex-col items-start space-y-4">
-            <Callout.Root variant="soft">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="outline">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="surface">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
+            <Card variant="surface">
+              <Text as="div" size="2" weight="bold">
+                Quick start
+              </Text>
+              <Text as="div" color="gray" size="2">
+                Start building your next project in minutes
+              </Text>
+            </Card>
+
+            <Card variant="classic">
+              <Text as="div" size="2" weight="bold">
+                Quick start
+              </Text>
+              <Text as="div" color="gray" size="2">
+                Start building your next project in minutes
+              </Text>
+            </Card>
           </div>
           <p className="mt-3 font-semibold">Code</p>
           <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
