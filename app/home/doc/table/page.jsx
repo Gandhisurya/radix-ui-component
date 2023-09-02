@@ -8,7 +8,7 @@ import {
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
 
-function Table() {
+function Tables() {
   const router = useRouter();
 
   const fallBackContent = `
@@ -218,4 +218,4 @@ function Table() {
   );
 }
 
-export default Table;
+export default Tables;

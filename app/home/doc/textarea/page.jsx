@@ -1,5 +1,12 @@
 "use client";
-import { Button, Callout, Link, Table } from "@radix-ui/themes";
+import {
+  Button,
+  Callout,
+  Link,
+  Table,
+  TextArea,
+  TextField,
+} from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
@@ -7,80 +14,41 @@ import {
   ExclamationTriangleIcon,
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
-function TextArea() {
+function TextAreas() {
   const router = useRouter();
 
-  const fallBackContent = `
-    
-   \`\`\`
-      <Callout.Root size="3">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="2">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="1">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-   \`\`\`
-    
-    `;
+  const sizeContent = `
+        
+  \`\`\`
+
+    <TextArea color="blue" variant="soft" placeholder="Reply to comment…" />
+    <TextArea color="green" variant="soft" placeholder="Reply to comment…" />
+    <TextArea color="red" variant="soft" placeholder="Reply to comment…" />
+
+ \`\`\`
+      
+      `;
 
   const varientContent = `
         
-    \`\`\`
-      <Callout.Root variant="soft">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="outline">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="surface">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
+  \`\`\`
+
+      <TextArea color="blue" variant="soft" placeholder="Reply to comment…" />
+      <TextArea color="green" variant="soft" placeholder="Reply to comment…" />
+      <TextArea color="red" variant="soft" placeholder="Reply to comment…" />
+
+  \`\`\`
+          
+          `;
+
+  const colorContent = `
+        
+  \`\`\`
+
+    <TextArea color="blue" variant="soft" placeholder="Reply to comment…" />
+    <TextArea color="green" variant="soft" placeholder="Reply to comment…" />
+    <TextArea color="red" variant="soft" placeholder="Reply to comment…" />
+
    \`\`\`
         
         `;
@@ -88,10 +56,8 @@ function TextArea() {
   return (
     <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
       <div className="mt-20">
-        <p className="font-semibold text-3xl ">Card</p>
-        <p className="mt-2 font-medium">
-          Container that groups related content and actions.
-        </p>
+        <p className="font-semibold text-3xl ">Text Area</p>
+        <p className="mt-2 font-medium">Captures multi-line user input.</p>
       </div>
       <div className="max-w-[600px] mt-3">
         <p className="font-semibold text-lg mt-2">Reference</p>
@@ -129,78 +95,56 @@ function TextArea() {
         <p className="font-semibold my-3 text-xl">1. Size</p>
         <div>
           <div className="flex flex-col items-start space-y-4">
-            <Callout.Root size="3">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-
-            <Callout.Root size="2">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-
-            <Callout.Root size="1">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
+            <TextArea size="1" placeholder="Reply to comment…" />
+            <TextArea size="2" placeholder="Reply to comment…" />
+            <TextArea size="3" placeholder="Reply to comment…" />
           </div>
           <p className="mt-3 font-semibold">Code</p>
-          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
-            {fallBackContent}
+          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100 overflow-y-auto">
+            {sizeContent}
           </ReactMarkdown>
         </div>
         <div className="mt-4">
           <p className="my-3 font-semibold text-xl">2. Variant</p>
           <p className="my-2">
-            Use the variant properties to control the visual style.
+            Use the variant prop to control the visual style.
           </p>
           <div className="mt-3 flex flex-col items-start space-y-4">
-            <Callout.Root variant="soft">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="outline">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="surface">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
+            <TextArea variant="surface" placeholder="Reply to comment…" />
+            <TextArea variant="classic" placeholder="Reply to comment…" />
+            <TextArea variant="soft" placeholder="Reply to comment…" />
           </div>
           <p className="mt-3 font-semibold">Code</p>
-          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
+          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100 overflow-y-auto">
             {varientContent}
+          </ReactMarkdown>
+        </div>
+        <div className="mt-4">
+          <p className="my-3 font-semibold text-xl">3. Color</p>
+          <p className="my-2">
+            Use the color prop to assign a specific color, ignoring the global
+            theme.
+          </p>
+          <div className="mt-3 flex flex-col items-start space-y-4">
+            <TextArea
+              color="blue"
+              variant="soft"
+              placeholder="Reply to comment…"
+            />
+            <TextArea
+              color="green"
+              variant="soft"
+              placeholder="Reply to comment…"
+            />
+            <TextArea
+              color="red"
+              variant="soft"
+              placeholder="Reply to comment…"
+            />
+          </div>
+          <p className="mt-3 font-semibold">Code</p>
+          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100 overflow-y-auto">
+            {colorContent}
           </ReactMarkdown>
         </div>
       </div>
@@ -217,4 +161,4 @@ function TextArea() {
   );
 }
 
-export default TextArea;
+export default TextAreas;
