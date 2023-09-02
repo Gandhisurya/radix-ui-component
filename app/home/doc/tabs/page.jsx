@@ -31,7 +31,6 @@ function Tab() {
       </Tabs.Content>
     </Box>
    </Tabs.Root>
-
    <Tabs.Root defaultValue="account">
      <Tabs.List size="2">
        <Tabs.Trigger value="account">Account</Tabs.Trigger>
