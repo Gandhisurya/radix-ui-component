@@ -1,97 +1,68 @@
 "use client";
-import { Button, Callout, Link, Table } from "@radix-ui/themes";
+import { Box, Table, Tabs, Text } from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
-import {
-  ExclamationTriangleIcon,
-  InfoCircledIcon,
-} from "@radix-ui/react-icons";
 
-function Tabs() {
+function Tab() {
   const router = useRouter();
 
   const fallBackContent = `
     
    \`\`\`
-      <Callout.Root size="3">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="2">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="1">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
+
+   <Tabs.Root defaultValue="account">
+     <Tabs.List size="1">
+       <Tabs.Trigger value="account">Account</Tabs.Trigger>
+       <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
+       <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
+     </Tabs.List>
+    <Box px="2" pt="2" pb="2">
+      <Tabs.Content value="account">
+        <Text size="2">Make changes to your account.</Text>
+      </Tabs.Content>
+      <Tabs.Content value="documents">
+        <Text size="2">Access and update your documents.</Text>
+      </Tabs.Content>
+      <Tabs.Content value="settings">
+        <Text size="2">
+          Edit your profile or update contact information.
+        </Text>
+      </Tabs.Content>
+    </Box>
+   </Tabs.Root>
+
+   <Tabs.Root defaultValue="account">
+     <Tabs.List size="2">
+       <Tabs.Trigger value="account">Account</Tabs.Trigger>
+       <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
+       <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
+     </Tabs.List>
+    <Box px="4" pt="3" pb="2">
+      <Tabs.Content value="account">
+        <Text size="2">Make changes to your account.</Text>
+      </Tabs.Content>
+      <Tabs.Content value="documents">
+        <Text size="2">Access and update your documents.</Text>
+      </Tabs.Content>
+      <Tabs.Content value="settings">
+        <Text size="2">
+          Edit your profile or update contact information.
+        </Text>
+      </Tabs.Content>
+    </Box>
+  </Tabs.Root>
+
    \`\`\`
     
     `;
 
-  const varientContent = `
-        
-    \`\`\`
-      <Callout.Root variant="soft">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="outline">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="surface">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-   \`\`\`
-        
-        `;
-
   return (
     <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
       <div className="mt-20">
-        <p className="font-semibold text-3xl ">Card</p>
+        <p className="font-semibold text-3xl ">Tabs</p>
         <p className="mt-2 font-medium">
-          Container that groups related content and actions.
+          Set of content sections to be displayed one at a time.
         </p>
       </div>
       <div className="max-w-[600px] mt-3">
@@ -107,19 +78,9 @@ function Tabs() {
             </Table.Header>
             <Table.Body>
               <Table.Row>
-                <Table.RowHeaderCell>asChild</Table.RowHeaderCell>
-                <Table.Cell>boolean</Table.Cell>
-                <Table.Cell>false</Table.Cell>
-              </Table.Row>
-              <Table.Row>
                 <Table.RowHeaderCell>size</Table.RowHeaderCell>
-                <Table.Cell>Responsive | "1" | "2" | "3" |</Table.Cell>
+                <Table.Cell>Responsive | "1" | "2" |</Table.Cell>
                 <Table.Cell>"2"</Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.RowHeaderCell>variant</Table.RowHeaderCell>
-                <Table.Cell>enum</Table.Cell>
-                <Table.Cell>"solid"</Table.Cell>
               </Table.Row>
             </Table.Body>
           </Table.Root>
@@ -129,79 +90,51 @@ function Tabs() {
         <p className="my-2 font-semibold text-lg">Examples</p>
         <p className="font-semibold my-3 text-xl">1. Size</p>
         <div>
-          <div className="flex flex-col items-start space-y-4">
-            <Callout.Root size="3">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-
-            <Callout.Root size="2">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-
-            <Callout.Root size="1">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
+          <div className="flex flex-col items-start space-y-4 border p-3 rounded-lg">
+            <Tabs.Root defaultValue="account">
+              <Tabs.List size="1">
+                <Tabs.Trigger value="account">Account</Tabs.Trigger>
+                <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
+                <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
+              </Tabs.List>
+              <Box px="2" pt="2" pb="2">
+                <Tabs.Content value="account">
+                  <Text size="2">Make changes to your account.</Text>
+                </Tabs.Content>
+                <Tabs.Content value="documents">
+                  <Text size="2">Access and update your documents.</Text>
+                </Tabs.Content>
+                <Tabs.Content value="settings">
+                  <Text size="2">
+                    Edit your profile or update contact information.
+                  </Text>
+                </Tabs.Content>
+              </Box>
+            </Tabs.Root>
+            <Tabs.Root defaultValue="account">
+              <Tabs.List size="2">
+                <Tabs.Trigger value="account">Account</Tabs.Trigger>
+                <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
+                <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
+              </Tabs.List>
+              <Box px="4" pt="3" pb="2">
+                <Tabs.Content value="account">
+                  <Text size="2">Make changes to your account.</Text>
+                </Tabs.Content>
+                <Tabs.Content value="documents">
+                  <Text size="2">Access and update your documents.</Text>
+                </Tabs.Content>
+                <Tabs.Content value="settings">
+                  <Text size="2">
+                    Edit your profile or update contact information.
+                  </Text>
+                </Tabs.Content>
+              </Box>
+            </Tabs.Root>
           </div>
           <p className="mt-3 font-semibold">Code</p>
           <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
             {fallBackContent}
-          </ReactMarkdown>
-        </div>
-        <div className="mt-4">
-          <p className="my-3 font-semibold text-xl">2. Variant</p>
-          <p className="my-2">
-            Use the variant properties to control the visual style.
-          </p>
-          <div className="mt-3 flex flex-col items-start space-y-4">
-            <Callout.Root variant="soft">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="outline">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="surface">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-          </div>
-          <p className="mt-3 font-semibold">Code</p>
-          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
-            {varientContent}
           </ReactMarkdown>
         </div>
       </div>
@@ -218,4 +151,4 @@ function Tabs() {
   );
 }
 
-export default Tabs;
+export default Tab;
