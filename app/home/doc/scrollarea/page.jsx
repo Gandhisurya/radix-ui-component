@@ -1,97 +1,144 @@
 "use client";
-import { Button, Callout, Link, Table } from "@radix-ui/themes";
+import { Box, Flex, Grid, ScrollArea, Table, Text } from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
-import {
-  ExclamationTriangleIcon,
-  InfoCircledIcon,
-} from "@radix-ui/react-icons";
 
 function Scroll() {
   const router = useRouter();
 
-  const fallBackContent = `
+  const sizeContent = `
     
    \`\`\`
-      <Callout.Root size="3">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="2">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="1">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
+   <Flex direction="column" gap="2">
+    <ScrollArea
+     size="1"
+     type="always"
+     scrollbars="horizontal"
+     style={{ width: 300, height: 12 }}
+    >
+     <Box style={{ width: 800, height: 1 }} />
+    </ScrollArea>
+
+    <ScrollArea
+     size="2"
+     type="always"
+     scrollbars="horizontal"
+     style={{ width: 350, height: 16 }}
+    >
+     <Box style={{ width: 900, height: 1 }} />
+    </ScrollArea>
+
+    <ScrollArea
+     size="3"
+     type="always"
+     scrollbars="horizontal"
+     style={{ width: 400, height: 20 }}
+    >
+     <Box style={{ width: 1000, height: 1 }} />
+    </ScrollArea>
+  </Flex>
    \`\`\`
     
     `;
 
-  const varientContent = `
+  const radiusContent = `
         
-    \`\`\`
-      <Callout.Root variant="soft">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="outline">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="surface">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-   \`\`\`
+  \`\`\`
+    <Flex direction="column" gap="3">
+      <ScrollArea
+        radius="full"
+        size="3"
+        type="always"
+        scrollbars="horizontal"
+        style={{ width: 350, height: 20 }}
+      >
+         <Box style={{ width: 800, height: 1 }} />
+    </ScrollArea>
+
+    <ScrollArea
+      radius="large"
+      size="3"
+      type="always"
+      scrollbars="horizontal"
+      style={{ width: 350, height: 20 }}
+    >
+      <Box style={{ width: 800, height: 1 }} />
+    </ScrollArea>
+
+    <ScrollArea
+      radius="full"
+      size="3"
+      type="always"
+      scrollbars="horizontal"
+      style={{ width: 350, height: 20 }}
+    >
+      <Box style={{ width: 800, height: 1 }} />
+    </ScrollArea>
+  </Flex>
+
+\`\`\`
         
         `;
+
+  const scrollContent = `
+  
+  \`\`\`
+<Grid columns="2" gap="2">
+  <ScrollArea
+    type="always"
+    scrollbars="vertical"
+    style={{ height: 150 }}
+  >
+    <Flex p="2" pr="8" direction="column" gap="4">
+      <Text size="2" trim="both">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Quidem eligendi fugit blanditiis natus quam distinctio
+        consequuntur odio laboriosam facilis, quaerat, asperiores nam
+        quia quo eius repellendus sit iure quibusdam. Architecto.
+      </Text>
+
+      <Text size="2" trim="both">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Quidem eligendi fugit blanditiis natus quam distinctio
+        consequuntur odio laboriosam facilis, quaerat, asperiores nam
+        quia quo eius repellendus sit iure quibusdam. Architecto.
+      </Text>
+    </Flex>
+  </ScrollArea>
+
+  <ScrollArea
+    type="always"
+    scrollbars="horizontal"
+    style={{ height: 150 }}
+  >
+    <Flex gap="4" p="2" style={{ width: 700 }}>
+      <Text size="2" trim="both">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Quidem eligendi fugit blanditiis natus quam distinctio
+        consequuntur odio laboriosam facilis, quaerat, asperiores nam
+        quia quo eius repellendus sit iure quibusdam. Architecto.
+      </Text>
+
+      <Text size="2" trim="both">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Quidem eligendi fugit blanditiis natus quam distinctio
+        consequuntur odio laboriosam facilis, quaerat, asperiores nam
+        quia quo eius repellendus sit iure quibusdam. Architecto.
+      </Text>
+    </Flex>
+  </ScrollArea>
+</Grid>
+  \`\`\`
+  `;
 
   return (
     <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
       <div className="mt-20">
-        <p className="font-semibold text-3xl ">Card</p>
+        <p className="font-semibold text-3xl ">Scroll Area</p>
         <p className="mt-2 font-medium">
-          Container that groups related content and actions.
+          Custom styled, cross-browser scrollable area using native
+          functionality.
         </p>
       </div>
       <div className="max-w-[600px] mt-3">
@@ -107,19 +154,21 @@ function Scroll() {
             </Table.Header>
             <Table.Body>
               <Table.Row>
-                <Table.RowHeaderCell>asChild</Table.RowHeaderCell>
-                <Table.Cell>boolean</Table.Cell>
-                <Table.Cell>false</Table.Cell>
-              </Table.Row>
-              <Table.Row>
                 <Table.RowHeaderCell>size</Table.RowHeaderCell>
                 <Table.Cell>Responsive | "1" | "2" | "3" |</Table.Cell>
                 <Table.Cell>"2"</Table.Cell>
               </Table.Row>
               <Table.Row>
-                <Table.RowHeaderCell>variant</Table.RowHeaderCell>
-                <Table.Cell>enum</Table.Cell>
-                <Table.Cell>"solid"</Table.Cell>
+                <Table.RowHeaderCell>radius</Table.RowHeaderCell>
+                <Table.Cell>
+                  "none" | "small" | "medium" | "large" | "full"
+                </Table.Cell>
+                <Table.Cell>-</Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.RowHeaderCell>scrollbars</Table.RowHeaderCell>
+                <Table.Cell>"vertical" | "horizontal" | "both"</Table.Cell>
+                <Table.Cell>"both"</Table.Cell>
               </Table.Row>
             </Table.Body>
           </Table.Root>
@@ -129,89 +178,144 @@ function Scroll() {
         <p className="my-2 font-semibold text-lg">Examples</p>
         <p className="font-semibold my-3 text-xl">1. Size</p>
         <div>
-          <div className="flex flex-col items-start space-y-4">
-            <Callout.Root size="3">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
+          <Flex direction="column" gap="2">
+            <ScrollArea
+              size="1"
+              type="always"
+              scrollbars="horizontal"
+              style={{ width: 300, height: 12 }}
+            >
+              <Box style={{ width: 800, height: 1 }} />
+            </ScrollArea>
 
-            <Callout.Root size="2">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
+            <ScrollArea
+              size="2"
+              type="always"
+              scrollbars="horizontal"
+              style={{ width: 350, height: 16 }}
+            >
+              <Box style={{ width: 900, height: 1 }} />
+            </ScrollArea>
 
-            <Callout.Root size="1">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need admin privileges to install and access this
-                application.
-              </Callout.Text>
-            </Callout.Root>
-          </div>
+            <ScrollArea
+              size="3"
+              type="always"
+              scrollbars="horizontal"
+              style={{ width: 400, height: 20 }}
+            >
+              <Box style={{ width: 1000, height: 1 }} />
+            </ScrollArea>
+          </Flex>
           <p className="mt-3 font-semibold">Code</p>
-          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
-            {fallBackContent}
+          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100 overflow-x-scroll">
+            {sizeContent}
           </ReactMarkdown>
         </div>
         <div className="mt-4">
-          <p className="my-3 font-semibold text-xl">2. Variant</p>
+          <p className="my-3 font-semibold text-xl">2. Radius</p>
           <p className="my-2">
-            Use the variant properties to control the visual style.
+            Use the radius prop to assign a specific radius to the handles,
+            ignoring the global theme.
           </p>
-          <div className="mt-3 flex flex-col items-start space-y-4">
-            <Callout.Root variant="soft">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="outline">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-            <Callout.Root variant="surface">
-              <Callout.Icon>
-                <InfoCircledIcon />
-              </Callout.Icon>
-              <Callout.Text>
-                You will need <Link href="#">admin privileges</Link> to install
-                and access this application.
-              </Callout.Text>
-            </Callout.Root>
-          </div>
+          <Flex direction="column" gap="3">
+            <ScrollArea
+              radius="none"
+              size="3"
+              type="always"
+              scrollbars="horizontal"
+              style={{ width: 350, height: 20 }}
+            >
+              <Box style={{ width: 800, height: 1 }} />
+            </ScrollArea>
+
+            <ScrollArea
+              radius="large"
+              size="3"
+              type="always"
+              scrollbars="horizontal"
+              style={{ width: 350, height: 20 }}
+            >
+              <Box style={{ width: 800, height: 1 }} />
+            </ScrollArea>
+
+            <ScrollArea
+              radius="full"
+              size="3"
+              type="always"
+              scrollbars="horizontal"
+              style={{ width: 350, height: 20 }}
+            >
+              <Box style={{ width: 800, height: 1 }} />
+            </ScrollArea>
+          </Flex>
           <p className="mt-3 font-semibold">Code</p>
-          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100">
-            {varientContent}
+          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100 overflow-x-scroll">
+            {radiusContent}
+          </ReactMarkdown>
+        </div>
+        <div className="mt-4">
+          <p className="my-3 font-semibold text-xl">3. Scollbars</p>
+          <p className="my-2">
+            Use the scrollbars prop to limit scrollable axes.
+          </p>
+          <Grid columns="2" gap="2">
+            <ScrollArea
+              type="always"
+              scrollbars="vertical"
+              style={{ height: 150 }}
+            >
+              <Flex p="2" pr="8" direction="column" gap="4">
+                <Text size="2" trim="both">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem eligendi fugit blanditiis natus quam distinctio
+                  consequuntur odio laboriosam facilis, quaerat, asperiores nam
+                  quia quo eius repellendus sit iure quibusdam. Architecto.
+                </Text>
+
+                <Text size="2" trim="both">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem eligendi fugit blanditiis natus quam distinctio
+                  consequuntur odio laboriosam facilis, quaerat, asperiores nam
+                  quia quo eius repellendus sit iure quibusdam. Architecto.
+                </Text>
+              </Flex>
+            </ScrollArea>
+
+            <ScrollArea
+              type="always"
+              scrollbars="horizontal"
+              style={{ height: 150 }}
+            >
+              <Flex gap="4" p="2" style={{ width: 700 }}>
+                <Text size="2" trim="both">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem eligendi fugit blanditiis natus quam distinctio
+                  consequuntur odio laboriosam facilis, quaerat, asperiores nam
+                  quia quo eius repellendus sit iure quibusdam. Architecto.
+                </Text>
+
+                <Text size="2" trim="both">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem eligendi fugit blanditiis natus quam distinctio
+                  consequuntur odio laboriosam facilis, quaerat, asperiores nam
+                  quia quo eius repellendus sit iure quibusdam. Architecto.
+                </Text>
+              </Flex>
+            </ScrollArea>
+          </Grid>
+          <p className="mt-3 font-semibold">Code</p>
+          <ReactMarkdown className="text-sm mt-4 border p-3 max-w-[600px] rounded-lg bg-blue-100 overflow-x-scroll">
+            {scrollContent}
           </ReactMarkdown>
         </div>
       </div>
       <div className="w-[130px] shadow-lg flex flex-col text-right mb-10 ml-auto rounded-lg p-2">
         <p className="">Next</p>
         <p
-          onClick={() => router?.push("/home/doc/card")}
+          onClick={() => router?.push("/home/doc/select")}
           className="text-orange-500 cursor-pointer hover:font-medium"
         >
-          Card
+          Select
         </p>
       </div>
     </div>
