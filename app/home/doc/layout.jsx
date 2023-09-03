@@ -6,7 +6,7 @@ import { ThemePanel } from "@radix-ui/themes";
 
 function DocLayout({ children }) {
   return (
-    <div className="flex w-full">
+    <div className="flex w-full" suppressHydrationWarning>
       <Sidebar />
       {children}
       <ThemePanel />
