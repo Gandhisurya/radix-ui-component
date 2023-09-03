@@ -1,42 +1,14 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 function Sidebar() {
   const router = useRouter();
-  const classname =
-    "text-sm font-medium mt-3 hover:bg-purple-100 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer";
-  const name = [
-    "Alert Dialog",
-    "Aspect Ratio",
-    "Avatar Badge",
-    "Button",
-    "Callout",
-    "Card",
-    "Context box",
-    "Context Menu",
-    "Dialog",
-    "Dropdown Menu",
-    "Hover Card",
-    "Icon Button",
-    "Inset",
-    "Popover",
-    "Radio Group",
-    "Scroll Area",
-    "Select",
-    "Seperator",
-    "Slider",
-    "Switch",
-    "Table",
-    "Tabs",
-    "Text Area",
-    "Text Field",
-    "Tooltip",
-  ];
+  const path = usePathname();
 
   return (
-    <div className="flex flex-col w-[260px] h-screen border-r-[1px] font-next">
+    <div className="flex flex-col w-[280px] h-screen border-r-[1px] font-next static">
       <div className="flex items-center justify-center mt-2 border-b-[1px]">
         <Link href="/home" className="py-4">
           <svg
@@ -60,13 +32,279 @@ function Sidebar() {
       <div className="flex flex-col mt-5 ml-8 h-auto overflow-y-scroll">
         <div className="">
           <p className="font-semibold text-left">Overview</p>
-          <p className={classname}>Get Statred</p>
+          <p
+            className={`${
+              path === "/home/doc/getstarted"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3  rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+            onClick={() => router?.push("/home/doc/getstarted")}
+          >
+            Get Statred
+          </p>
         </div>
         <div className="my-5">
           <p className="font-semibold text-left">Components</p>
-          {name?.map((each) => (
-            <p className={classname}>{each}</p>
-          ))}
+          <p
+            onClick={() => router?.push("/home/doc/alertdialog")}
+            className={`${
+              path === "/home/doc/alertdialog"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Alert Dialog
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/aspectratio")}
+            className={`${
+              path === "/home/doc/aspectratio"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Aspect Ratio
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/avatarbadge")}
+            className={`${
+              path === "/home/doc/avatarbadge"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Avatar Badge
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/badge")}
+            className={`${
+              path === "/home/doc/badge"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Badge
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/button")}
+            className={`${
+              path === "/home/doc/button"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Button
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/callout")}
+            className={`${
+              path === "/home/doc/callout"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Callout
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/card")}
+            className={`${
+              path === "/home/doc/card"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Card
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/contentbox")}
+            className={`${
+              path === "/home/doc/contentbox"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Context box
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/contextmenu")}
+            className={`${
+              path === "/home/doc/contextmenu"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Context Menu
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/dialog")}
+            className={`${
+              path === "/home/doc/dialog"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Dialog
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/dropdownmenu")}
+            className={`${
+              path === "/home/doc/dropdownmenu"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Dropdown Menu
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/hovercard")}
+            className={`${
+              path === "/home/doc/hovercard"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Hover Card
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/iconbutton")}
+            className={`${
+              path === "/home/doc/iconbutton"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Icon Button
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/inset")}
+            className={`${
+              path === "/home/doc/inset"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Inset
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/popover")}
+            className={`${
+              path === "/home/doc/popover"
+                ? "bg-blue-100 pl-4"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Popover
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/radiogroup")}
+            className={`${
+              path === "/home/doc/radiogroup"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Radio Group
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/scrollarea")}
+            className={`${
+              path === "/home/doc/scrollarea"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Scroll Area
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/select")}
+            className={`${
+              path === "/home/doc/select"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Select
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/seperator")}
+            className={`${
+              path === "/home/doc/seperator"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Seperator
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/slider")}
+            className={`${
+              path === "/home/doc/slider"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Slider
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/switch")}
+            className={`${
+              path === "/home/doc/switch"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Switch
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/table")}
+            className={`${
+              path === "/home/doc/table"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Table
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/tabs")}
+            className={`${
+              path === "/home/doc/tabs"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Tabs
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/textarea")}
+            className={`${
+              path === "/home/doc/textarea"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Text Area
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/textfield")}
+            className={`${
+              path === "/home/doc/textfield"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Text Field
+          </p>
+          <p
+            onClick={() => router?.push("/home/doc/tooltip")}
+            className={`${
+              path === "/home/doc/tooltip"
+                ? "bg-blue-100 pl-4 font-semibold"
+                : "hover:bg-rose-100 font-medium"
+            } text-sm mt-3 rounded-lg pl-2 flex justify-start items-center text-left h-8 w-[160px] cursor-pointer`}
+          >
+            Tooltip
+          </p>
         </div>
       </div>
     </div>

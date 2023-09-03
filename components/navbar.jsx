@@ -4,7 +4,10 @@ import React from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+import { useRouter } from "next/navigation";
+
 function NavBar() {
+  const router = useRouter();
   const icon = {
     rest: {
       rotate: 0,
@@ -38,7 +41,10 @@ function NavBar() {
         </svg>
       </Link>
       <div className="flex items-center">
-        <p className="mx-3 font-semibold cursor-pointer hover:scale-110 transition-transform">
+        <p
+          onClick={() => router?.push("/home/doc/getstarted")}
+          className="mx-3 font-semibold cursor-pointer hover:scale-110 transition-transform"
+        >
           Get Started
         </p>
         <p className="mx-3 font-semibold  cursor-pointer hover:scale-110 transition-transform">
