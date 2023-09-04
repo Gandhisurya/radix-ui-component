@@ -13,78 +13,37 @@ function Tables() {
 
   const fallBackContent = `
     
-   \`\`\`
-      <Callout.Root size="3">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="2">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root size="1">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need admin privileges to install and access this
-        application.
-      </Callout.Text>
-    </Callout.Root>
-   \`\`\`
+ \`\`\`
+  <Table.Root variant="surface">
+    <Table.Header>
+      <Table.Row>
+        <Table.ColumnHeaderCell>Full name</Table.ColumnHeaderCell>
+        <Table.ColumnHeaderCell>Email</Table.ColumnHeaderCell>
+        <Table.ColumnHeaderCell>Group</Table.ColumnHeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.RowHeaderCell>react</Table.RowHeaderCell>
+        <Table.Cell>react@example.com</Table.Cell>
+        <Table.Cell>Developer</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.RowHeaderCell>next</Table.RowHeaderCell>
+        <Table.Cell>next@example.com</Table.Cell>
+        <Table.Cell>Admin</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.RowHeaderCell>javascript</Table.RowHeaderCell>
+        <Table.Cell>javascript@example.com</Table.Cell>
+        <Table.Cell>Developer</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table.Root>
+
+  \`\`\`
     
     `;
-
-  const varientContent = `
-        
-    \`\`\`
-      <Callout.Root variant="soft">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="outline">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-  
-    <Callout.Root variant="surface">
-      <Callout.Icon>
-        <InfoCircledIcon />
-      </Callout.Icon>
-      <Callout.Text>
-        You will need <Link href="#">admin privileges</Link> 
-        to install and access
-        this application.
-      </Callout.Text>
-    </Callout.Root>
-   \`\`\`
-        
-        `;
 
   return (
     <div className="flex flex-col w-[1200px] h-[800px] overflow-y-scroll px-40 font-next">
@@ -269,10 +228,10 @@ function Tables() {
       </div>
       <div className="max-w-[600px] mt-3">
         <p className="my-2 font-semibold text-lg">Examples</p>
-        <p className="font-semibold my-3 text-xl">1. Size</p>
-        <div>
+        <p className="font-semibold my-3 text-xl">Size</p>
+        <div className="max-w-[600px]">
           <div className="flex flex-col items-start space-y-4">
-            <Table.Root>
+            <Table.Root variant="surface">
               <Table.Header>
                 <Table.Row>
                   <Table.ColumnHeaderCell>Full name</Table.ColumnHeaderCell>
@@ -282,18 +241,18 @@ function Tables() {
               </Table.Header>
               <Table.Body>
                 <Table.Row>
-                  <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
-                  <Table.Cell>danilo@example.com</Table.Cell>
+                  <Table.RowHeaderCell>react</Table.RowHeaderCell>
+                  <Table.Cell>react@example.com</Table.Cell>
                   <Table.Cell>Developer</Table.Cell>
                 </Table.Row>
                 <Table.Row>
-                  <Table.RowHeaderCell>Zahra Ambessa</Table.RowHeaderCell>
-                  <Table.Cell>zahra@example.com</Table.Cell>
+                  <Table.RowHeaderCell>next</Table.RowHeaderCell>
+                  <Table.Cell>next@example.com</Table.Cell>
                   <Table.Cell>Admin</Table.Cell>
                 </Table.Row>
                 <Table.Row>
-                  <Table.RowHeaderCell>Jasper Eriksson</Table.RowHeaderCell>
-                  <Table.Cell>jasper@example.com</Table.Cell>
+                  <Table.RowHeaderCell>javascript</Table.RowHeaderCell>
+                  <Table.Cell>javascript@example.com</Table.Cell>
                   <Table.Cell>Developer</Table.Cell>
                 </Table.Row>
               </Table.Body>
